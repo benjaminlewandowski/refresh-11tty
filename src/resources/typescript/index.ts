@@ -1,5 +1,8 @@
-import "./utilities/selectors";
-import "./utilities/helpers";
-import "./modules/nojs";
-import "./modules/colorschemetoggle";
-import "./modules/loader";
+import nojs from "./modules/nojs"
+nojs()
+
+import colorschemetoggle from "./modules/colorschemetoggle"
+colorschemetoggle()
+
+import loader from "./modules/loader"
+loader()

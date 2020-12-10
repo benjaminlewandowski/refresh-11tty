@@ -1,57 +1,68 @@
 import selectors from "../utilities/selectors";
 
 const colorscheme = function colorscheme() {
-    if (
-        selectors.colorSchemeToggle === null ||
-        selectors.colorSchemeToggle === undefined
-    ) {
-        console.warn("selectors.colorSchemeToggle is null or undefined");
+    const system = "color-scheme--system"
+    const light = "color-scheme--light"
+    const dark = "color-scheme--dark"
+
+    if ( selectors.colorSchemeToggle === null ) {
+        console.warn("selectors.colorSchemeToggle is null");
+    } else if ( selectors.colorSchemeToggle === undefined) {
+        console.warn("selectors.colorSchemeToggle is undefined");
     } else {
         console.info("selectors.colorSchemeToggle found");
+
         const colorSchemeDark = () => {
-            selectors.root.classList.add("color-scheme--dark");
-            selectors.root.classList.remove("color-scheme--system");
-            selectors.root.classList.remove("color-scheme--light");
+            selectors.root.classList.add(dark);
+            selectors.root.classList.remove(system);
+            selectors.root.classList.remove(light);
             localStorage.setItem("colorScheme", "dark");
         };
 
         const colorSchemeSystem = () => {
-            selectors.root.classList.remove("color-scheme--dark");
-            selectors.root.classList.add("color-scheme--system");
-            selectors.root.classList.remove("color-scheme--light");
+            selectors.root.classList.remove(dark);
+            selectors.root.classList.add(system);
+            selectors.root.classList.remove(light);
             localStorage.setItem("colorScheme", "system");
         };
 
         const colorSchemeLight = () => {
-            selectors.root.classList.remove("color-scheme--dark");
-            selectors.root.classList.remove("color-scheme--system");
-            selectors.root.classList.add("color-scheme--light");
+            selectors.root.classList.remove(dark);
+            selectors.root.classList.remove(system);
+            selectors.root.classList.add(light);
             localStorage.setItem("colorScheme", "light");
         };
 
         if (localStorage.getItem("colorScheme") === "dark") {
             colorSchemeDark();
+            console.info("Color Scheme found: dark");
         }
 
         if (localStorage.getItem("colorScheme") === "light") {
             colorSchemeLight();
+            console.info("Color Scheme found: light");
         }
 
         if (localStorage.getItem("colorScheme") === "system") {
             colorSchemeSystem();
+            console.info("Color Scheme found: system");
         }
 
         if (localStorage.getItem("colorScheme") === null) {
             colorSchemeSystem();
+            console.info("Color Scheme not found and set to dark");
         }
 
         selectors.colorSchemeToggle.addEventListener("click", () => {
             if (localStorage.getItem("colorScheme") === "dark") {
                 colorSchemeSystem();
+                console.info("Color Scheme set to: system");
             } else if (localStorage.getItem("colorScheme") === "light") {
                 colorSchemeDark();
+                console.info("Color Scheme set to: dark");
             } else {
                 colorSchemeLight();
+                console.info("Color Scheme set to: light");
             }
         });
     }

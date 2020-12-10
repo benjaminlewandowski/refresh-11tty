@@ -1,16 +1,16 @@
 {
     "compilerOptions": {
-        "module": "ES6",
+        "module": "AMD",
         "target": "ES6",
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
-        "outDir": "./src/resources/javascript",
+        "rootDir": "./src/resources/typescript"
     },
     "watchOptions": {
         "watchFile": "useFsEvents",
         "watchDirectory": "useFsEvents",
         "fallbackPolling": "dynamicPriority"
     },
-    "include": ["src/resources/typescript/index.ts"],
-    "exclude": ["node_modules"]
+    "include": ["./src/resources/typescript/index.ts"],
+    "exclude": ["./node_modules"]
 }
