@@ -1,0 +1,31 @@
+{# include meta tags #}
+{% include "components/metadata.njk" %}
+<title>
+    {% if meta_title %}{{ meta_title }}
+    {% else %}{{ title }}
+    {% endif %} | {{ site.name }}</title>
+
+{% if page.fileSlug === 'blog' %}
+    <meta name="robots" content="noindex,follow"/>
+{% else %}
+    <meta name="robots" content="index,follow"/>
+{% endif %}
+
+{# include scripts #}
+<script type="module" src="/index.js" defer></script>
+
+<link rel="stylesheet" href="/css/refresh-vars.css">
+<link rel="stylesheet" href="/css/refresh-loader.css">
+<link rel="stylesheet" href="/css/refresh-basic.css">
+
+{# include social meta tags #}
+{% include "components/social-meta.njk" %}
+
+{# include favicons #}
+{% include 'components/icons.njk' %}
+
+{# lastly include fonts, etc #}
+{% include 'components/fonts.njk' %}
+
+{# canonical #}
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">

@@ -1,0 +1,32 @@
+{
+    "extends": [
+        "stylelint-config-recommended",
+        "stylelint-order"
+    ],
+    "plugins": [
+        "stylelint-scss",
+        "stylelint-prettier",
+        "stylelint-order",
+        "stylelint-config-rational-order/plugin"
+    ],
+    "rules": {
+        "rule-empty-line-before": [
+            "always",
+            {
+                "except": "first-nested"
+            }
+        ],
+        "block-no-empty": null,
+        "no-empty-source": null,
+        "prettier/prettier": true,
+        "order/properties-order": [],
+        "plugin/rational-order": [
+            true,
+            {
+                "border-in-box-model": false,
+                "empty-line-between-groups": true,
+                "severity": "warning"
+            }
+        ]
+    }
+}

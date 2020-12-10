@@ -1,0 +1,27 @@
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    width: 100%;
+
+    height: $xhuge;
+
+    background-color: var(--neutral-extreme-deemphasized);
+
+    box-shadow: 0 0 $large var(--brand-primary-25);
+
+    transition: transform $duration $timing 0ms, background-color $duration $timing 0ms,
+        box-shadow $duration $timing 0ms;
+
+    &.is-faded {
+        transform: translateY(-4rem);
+    }
+}
+
+.header__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 $xxlarge;
+}

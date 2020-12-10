@@ -1,0 +1,36 @@
+.content-wrapper {
+    width: 100%;
+    max-width: var(--mediamax);
+    margin-right: auto;
+    margin-left: auto;
+
+    &.has-sidebar {
+        display: flex;
+        flex-wrap: wrap;
+
+        & .content-innner {
+            @media (min-width: $MediaLargeWidth) {
+                width: calc(((100% / 3) * 2) - #{$xsmall});
+            }
+        }
+    }
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media (min-width: $MediaLargeWidth) {
+        width: calc((100% / 3) - #{$xsmall});
+    }
+
+    &.is-left {
+        order: -1;
+        margin-right: $normal;
+    }
+
+    &.is-right {
+        margin-left: $normal;
+    }
+}

@@ -1,0 +1,41 @@
+.is-home {
+    .page-title {
+        span {
+            display: block;
+
+            &:first-child {
+                font-style: italic;
+            }
+        }
+    }
+
+    .hero {
+        .image {
+            display: flex;
+            grid-row: 2;
+            align-items: flex-start;
+            justify-content: flex-end;
+
+            border-radius: $xsmall;
+            box-shadow: 0 0 $tiny var(--brand-primary);
+
+            @media (min-width: $MediaSmallWidth) {
+                max-width: 50%;
+                margin-right: auto;
+            }
+
+            @media (min-width: $MediaMediumWidth) {
+                grid-row: initial;
+                max-width: initial;
+                margin-right: initial;
+            }
+
+            img {
+                width: 100%;
+                object-fit: contain;
+
+                mix-blend-mode: luminosity;
+            }
+        }
+    }
+}

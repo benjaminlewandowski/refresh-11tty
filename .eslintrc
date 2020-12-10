@@ -1,0 +1,19 @@
+{
+    "extends": [
+        "standard",
+        "prettier"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "sourceType": "module"
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "commonjs": true,
+        "es2017": true
+    },
+    "globals": {
+        "path": true
+    }
+}

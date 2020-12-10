@@ -1,0 +1,45 @@
+ol,
+ul,
+dl {
+    margin: 0 0 $normal 0;
+
+    list-style-position: outside;
+
+    & li {
+        padding-left: $normal;
+    }
+}
+
+ul {
+    padding-left: $normal;
+
+    list-style-type: disc;
+}
+
+ol {
+    padding-left: $xlarge;
+
+    list-style-type: decimal-leading-zero;
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+    margin: 0 0 $xsmall 0;
+}
+
+dt {
+    margin: 0;
+
+    font-weight: $font-bold-weight;
+}
+
+dd {
+    margin: 0 0 $xsmall 0;
+}

@@ -1,0 +1,9 @@
+<nav id="subnav" class="subnav" role="navigation" aria-label="Navigation">
+    <ul class="subnav-inner">
+        {#% for submenu in site.menus.sub|sortByWeight %}
+            <li class="subnav-item">
+                <a id="submenu-{{ submenu.id }}" weight="{{ submenu.weight }}" class="subnav-link{% if url(page) == url(submenu.url) or url(page) == url(submenu.url)|trim('/') %} active{% endif %}" href="{{ url(submenu.url) }}">{{ submenu.name }}</a>
+            </li>
+        {% endfor %#}
+    </ul>
+</nav>

@@ -1,0 +1,14 @@
+<nav id="navigation-main" class="mainnavigation">
+    <ul class="mainnavigation__menu">
+        {% for item in navigation.main %}
+            <li class="level-1 mainnavigation__item">
+                <a href="{{ item.url | safe }}" class="mainnavigation__link{% if page.url == item.url %} active{% endif %}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    {# include mobile nav button #}
+    {% include "components/mobile-nav.njk" %}
+
+    {% include 'components/color-mode.njk' %}
+</nav>

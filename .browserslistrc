@@ -1,0 +1,5 @@
+> 0.2%
+not ie > 0
+not op_mini > 0
+not chrome < 60
+not firefox < 50

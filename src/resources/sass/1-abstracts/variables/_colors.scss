@@ -1,0 +1,58 @@
+$brand-primary: hsl(200, 80%, 25%);
+$brand-primary-dark: saturate(darken($brand-primary, 15), 15);
+$brand-primary-light: desaturate(lighten($brand-primary, 30), 30);
+
+$brand-primary-mod: hsl(200, 80%, 35%);
+$brand-primary-mod-dark: saturate(darken($brand-primary, 15), 15);
+$brand-primary-mod-light: desaturate(lighten($brand-primary, 30), 30);
+
+$brand-secondary: hsl(200, 10%, 25%);
+$brand-secondary-dark: saturate(darken($brand-secondary, 15), 15);
+$brand-secondary-light: desaturate(lighten($brand-secondary, 30), 30);
+
+$brand-secondary-mod: hsl(200, 10%, 35%);
+$brand-secondary-mod-dark: saturate(darken($brand-secondary, 15), 15);
+$brand-secondary-mod-light: desaturate(lighten($brand-secondary, 30), 30);
+
+$white: hsl(240, 5%, 100%);
+$gray-extra-light: hsl(240, 5%, 95%);
+$gray-light: hsl(240, 5%, 80%);
+$gray: hsl(240, 5%, 50%);
+$gray-dark: hsl(240, 5%, 20%);
+$gray-extra-dark: hsl(240, 5%, 5%);
+$black: hsl(240, 5%, 0%);
+
+$highlight-success: hsl(150, 60%, 50%);
+$highlight-success-dark: saturate(darken($highlight-success, 15), 15);
+$highlight-success-light: desaturate(lighten($highlight-success, 30), 30);
+
+$highlight-error: hsl(0, 80%, 60%);
+$highlight-error-dark: saturate(darken($highlight-error, 15), 15);
+$highlight-error-light: desaturate(lighten($highlight-error, 30), 30);
+
+$highlight-notice: hsl(55, 100%, 50%);
+$highlight-notice-dark: saturate(darken($highlight-notice, 15), 15);
+$highlight-notice-light: desaturate(lighten($highlight-notice, 30), 30);
+
+$highlight-info: hsl(200, 70%, 60%);
+$highlight-info-dark: saturate(darken($highlight-info, 15), 15);
+$highlight-info-light: desaturate(lighten($highlight-info, 30), 30);
+
+$highlight-success-mod: hsl(150, 60%, 30%);
+$highlight-success-mod-dark: saturate(darken($highlight-success-mod, 15), 15);
+$highlight-success-mod-light: desaturate(
+    lighten($highlight-success-mod, 30),
+    30
+);
+
+$highlight-error-mod: hsl(0, 80%, 20%);
+$highlight-error-mod-dark: saturate(darken($highlight-error-mod, 15), 15);
+$highlight-error-mod-light: desaturate(lighten($highlight-error-mod, 30), 30);
+
+$highlight-notice-mod: hsl(55, 100%, 30%);
+$highlight-notice-mod-dark: saturate(darken($highlight-notice-mod, 15), 15);
+$highlight-notice-mod-light: desaturate(lighten($highlight-notice-mod, 30), 30);
+
+$highlight-info-mod: hsl(200, 70%, 20%);
+$highlight-info-mod-dark: saturate(darken($highlight-info-mod, 15), 15);
+$highlight-info-mod-light: desaturate(lighten($highlight-info-mod, 30), 30);

@@ -1,0 +1,29 @@
+---
+layout: default
+meta_title: Style Guide
+body_class: styleguide
+title: Style Guide
+eleventyNavigation:
+    key: styleguide
+    title: Style Guide
+    order: 0
+---
+<h1>Styleguide</h1>
+
+<nav>
+    <ul class="index">
+        <li class="index-item">
+            <a class="index-link" href="#component__typography">Typography</a>
+        </li>
+        <li class="index-item">
+            <a class="index-link" href="#component__buttons">Buttons</a>
+        </li>
+        <li class="index-item">
+            <a class="index-link" href="#component__tables">Tables</a>
+        </li>
+    </ul>
+</nav>
+
+{% include "./_components/typography.njk" %}
+{% include "./_components/buttons.njk" %}
+{% include "./_components/tables.njk" %}

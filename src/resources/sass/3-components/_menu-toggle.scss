@@ -1,0 +1,135 @@
+.mainnavigation {
+    display: flex;
+    align-items: center;
+    min-height: $xhuge;
+
+    .mainnavigation__menu {
+        position: fixed;
+        top: $negative-xhuge;
+        left: 0;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        min-height: $xhuge;
+        margin: 0;
+        padding: $normal;
+
+        background-color: var(--neutral-extreme-deemphasized);
+        box-shadow: 0 $large $large $negative-large
+            var(--brand-primary-25);
+
+        opacity: 0;
+
+        transition: opacity $timing $duration, top $timing $duration,
+            background-color $timing $duration;
+
+        @media (min-width: $MediaMediumWidth) {
+            position: static;
+
+            display: flex;
+            height: 100%;
+
+            box-shadow: none;
+
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: $MediaMediumWidth - $tiny) {
+        &.is-visible {
+            .mainnavigation__menu {
+                top: $xhuge;
+
+                opacity: 1;
+            }
+        }
+    }
+}
+
+#navigation-toggle {
+    display: block;
+    width: $xxlarge;
+    height: $xxlarge;
+    padding: $xxsmall;
+
+    color: var(--neutral-extreme-deemphasized);
+
+    background: var(--brand-primary);
+
+    border: $tiny solid currentColor;
+    border-radius: $xxsmall;
+    cursor: pointer;
+
+    appearance: none;
+
+    @media (min-width: $MediaMediumWidth) {
+        display: none;
+    }
+
+    .text {
+        display: none;
+    }
+
+    .icon {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        > span {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: 100%;
+        }
+    }
+
+    .icon-line {
+        display: block;
+        width: 100%;
+        height: 4px;
+
+        background-color: currentColor;
+    }
+
+    &.is-closed {
+        .menu-closed {
+            opacity: 1;
+        }
+
+        .menu-opened {
+            height: 0;
+
+            opacity: 0;
+        }
+    }
+
+    &.is-opened {
+        .menu-closed {
+            height: 0;
+
+            opacity: 0;
+        }
+
+        .menu-opened {
+            opacity: 1;
+        }
+
+        .icon-line {
+            position: absolute;
+            top: $xsmall;
+
+            &:first-child {
+                transform: rotateZ(45deg);
+            }
+
+            &:last-child {
+                transform: rotateZ(-45deg);
+            }
+        }
+    }
+}

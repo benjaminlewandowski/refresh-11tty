@@ -1,0 +1,741 @@
+@import "1-abstracts/variables";
+
+:root {
+    --neutral-extreme-deemphasized: #{$white};
+    --neutral-extreme-deemphasized-25: #{transparentize($white, 0.75)};
+    --neutral-extreme-deemphasized-50: #{transparentize($white, 0.5)};
+    --neutral-extreme-deemphasized-75: #{transparentize($white, 0.25)};
+
+    --neutral-strong-deemphasized: #{$gray-extra-light};
+    --neutral-strong-deemphasized-25: #{transparentize($gray-extra-light, 0.75)};
+    --neutral-strong-deemphasized-50: #{transparentize($gray-extra-light, 0.5)};
+    --neutral-strong-deemphasized-75: #{transparentize($gray-extra-light, 0.25)};
+
+    --neutral-deemphasized: #{$gray-light};
+    --neutral-deemphasized-25: #{transparentize($gray-light, 0.75)};
+    --neutral-deemphasized-50: #{transparentize($gray-light, 0.5)};
+    --neutral-deemphasized-75: #{transparentize($gray-light, 0.25)};
+
+    --neutral: #{$gray};
+    --neutral-25: #{transparentize($gray, 0.75)};
+    --neutral-50: #{transparentize($gray, 0.5)};
+    --neutral-75: #{transparentize($gray, 0.25)};
+
+    --neutral-emphasized: #{$gray-dark};
+    --neutral-emphasized-25: #{transparentize($gray-dark, 0.75)};
+    --neutral-emphasized-50: #{transparentize($gray-dark, 0.5)};
+    --neutral-emphasized-75: #{transparentize($gray-dark, 0.25)};
+
+    --neutral-strong-emphasized: #{$gray-extra-dark};
+    --neutral-strong-emphasized-25: #{transparentize($gray-extra-dark, 0.75)};
+    --neutral-strong-emphasized-50: #{transparentize($gray-extra-dark, 0.5)};
+    --neutral-strong-emphasized-75: #{transparentize($gray-extra-dark, 0.25)};
+
+    --neutral-extreme-emphasized: #{$black};
+    --neutral-extreme-emphasized-25: #{transparentize($black, 0.75)};
+    --neutral-extreme-emphasized-50: #{transparentize($black, 0.5)};
+    --neutral-extreme-emphasized-75: #{transparentize($black, 0.25)};
+
+    --brand-primary: #{$brand-primary};
+    --brand-primary-25: #{transparentize($brand-primary, 0.75)};
+    --brand-primary-50: #{transparentize($brand-primary, 0.5)};
+    --brand-primary-75: #{transparentize($brand-primary, 0.25)};
+
+    --brand-primary-deemphasized: #{$brand-primary-light};
+    --brand-primary-deemphasized-25: #{transparentize(
+            $brand-primary-light,
+            0.75
+        )};
+    --brand-primary-deemphasized-50: #{transparentize($brand-primary-light, 0.5)};
+    --brand-primary-deemphasized-75: #{transparentize(
+            $brand-primary-light,
+            0.25
+        )};
+
+    --brand-primary-emphasized: #{$brand-primary-dark};
+    --brand-primary-emphasized-25: #{transparentize($brand-primary-dark, 0.75)};
+    --brand-primary-emphasized-50: #{transparentize($brand-primary-dark, 0.5)};
+    --brand-primary-emphasized-75: #{transparentize($brand-primary-dark, 0.25)};
+
+    --brand-secondary: #{$brand-secondary};
+    --brand-secondary-25: #{transparentize($brand-secondary, 0.75)};
+    --brand-secondary-50: #{transparentize($brand-secondary, 0.5)};
+    --brand-secondary-75: #{transparentize($brand-secondary, 0.25)};
+
+    --brand-secondary-deemphasized: #{$brand-secondary-light};
+    --brand-secondary-deemphasized-25: #{transparentize(
+            $brand-secondary-light,
+            0.75
+        )};
+    --brand-secondary-deemphasized-50: #{transparentize(
+            $brand-secondary-light,
+            0.5
+        )};
+    --brand-secondary-deemphasized-75: #{transparentize(
+            $brand-secondary-light,
+            0.25
+        )};
+
+    --brand-secondary-emphasized: #{$brand-secondary-dark};
+    --brand-secondary-emphasized-25: #{transparentize(
+            $brand-secondary-dark,
+            0.75
+        )};
+    --brand-secondary-emphasized-50: #{transparentize(
+            $brand-secondary-dark,
+            0.5
+        )};
+    --brand-secondary-emphasized-75: #{transparentize(
+            $brand-secondary-dark,
+            0.25
+        )};
+
+    --highlight-success: #{$highlight-success};
+    --highlight-success-25: #{transparentize($highlight-success, 0.75)};
+    --highlight-success-50: #{transparentize($highlight-success, 0.5)};
+    --highlight-success-75: #{transparentize($highlight-success, 0.25)};
+
+    --highlight-success-deemphasized: #{$highlight-success-light};
+    --highlight-success-deemphasized-25: #{transparentize(
+            $highlight-success-light,
+            0.75
+        )};
+    --highlight-success-deemphasized-50: #{transparentize(
+            $highlight-success-light,
+            0.5
+        )};
+    --highlight-success-deemphasized-75: #{transparentize(
+            $highlight-success-light,
+            0.25
+        )};
+
+    --highlight-success-emphasized: #{$highlight-success-dark};
+    --highlight-success-emphasized-25: #{transparentize(
+            $highlight-success-dark,
+            0.75
+        )};
+    --highlight-success-emphasized-50: #{transparentize(
+            $highlight-success-dark,
+            0.5
+        )};
+    --highlight-success-emphasized-75: #{transparentize(
+            $highlight-success-dark,
+            0.25
+        )};
+
+    --highlight-notice: #{$highlight-notice};
+    --highlight-notice-25: #{transparentize($highlight-notice, 0.75)};
+    --highlight-notice-50: #{transparentize($highlight-notice, 0.5)};
+    --highlight-notice-75: #{transparentize($highlight-notice, 0.25)};
+
+    --highlight-notice-deemphasized: #{$highlight-notice-light};
+    --highlight-notice-deemphasized-25: #{transparentize(
+            $highlight-notice-light,
+            0.75
+        )};
+    --highlight-notice-deemphasized-50: #{transparentize(
+            $highlight-notice-light,
+            0.5
+        )};
+    --highlight-notice-deemphasized-75: #{transparentize(
+            $highlight-notice-light,
+            0.25
+        )};
+
+    --highlight-notice-emphasized: #{$highlight-notice-dark};
+    --highlight-notice-emphasized-25: #{transparentize(
+            $highlight-notice-dark,
+            0.75
+        )};
+    --highlight-notice-emphasized-50: #{transparentize(
+            $highlight-notice-dark,
+            0.5
+        )};
+    --highlight-notice-emphasized-75: #{transparentize(
+            $highlight-notice-dark,
+            0.25
+        )};
+
+    --highlight-error: #{$highlight-error};
+    --highlight-error-25: #{transparentize($highlight-error, 0.75)};
+    --highlight-error-50: #{transparentize($highlight-error, 0.5)};
+    --highlight-error-75: #{transparentize($highlight-error, 0.25)};
+
+    --highlight-error-deemphasized: #{$highlight-error-light};
+    --highlight-error-deemphasized-25: #{transparentize(
+            $highlight-error-light,
+            0.75
+        )};
+    --highlight-error-deemphasized-50: #{transparentize(
+            $highlight-error-light,
+            0.5
+        )};
+    --highlight-error-deemphasized-75: #{transparentize(
+            $highlight-error-light,
+            0.25
+        )};
+
+    --highlight-error-emphasized: #{$highlight-error-dark};
+    --highlight-error-emphasized-25: #{transparentize(
+            $highlight-error-dark,
+            0.75
+        )};
+    --highlight-error-emphasized-50: #{transparentize(
+            $highlight-error-dark,
+            0.5
+        )};
+    --highlight-error-emphasized-75: #{transparentize(
+            $highlight-error-dark,
+            0.25
+        )};
+
+    --highlight-info: #{$highlight-info};
+    --highlight-info-25: #{transparentize($highlight-info, 0.75)};
+    --highlight-info-50: #{transparentize($highlight-info, 0.5)};
+    --highlight-info-75: #{transparentize($highlight-info, 0.25)};
+
+    --highlight-info-deemphasized: #{$highlight-info-light};
+    --highlight-info-deemphasized-25: #{transparentize(
+            $highlight-info-light,
+            0.75
+        )};
+    --highlight-info-deemphasized-50: #{transparentize(
+            $highlight-info-light,
+            0.5
+        )};
+    --highlight-info-deemphasized-75: #{transparentize(
+            $highlight-info-light,
+            0.25
+        )};
+
+    --highlight-info-emphasized: #{$highlight-info-dark};
+    --highlight-info-emphasized-25: #{transparentize($highlight-info-dark, 0.75)};
+    --highlight-info-emphasized-50: #{transparentize($highlight-info-dark, 0.5)};
+    --highlight-info-emphasized-75: #{transparentize($highlight-info-dark, 0.25)};
+
+    --body-bg: var(--neutral-strong-deemphasized);
+    --border-color: var(--neutral-emphasized);
+    --text-color-deemphasized: var(--neutral-emphasized);
+    --text-color: var(--neutral-strong-emphasized);
+    --text-color-emphasized: var(--neutral-extreme-emphasized);
+    --link-color: var(--brand-primary);
+    --link-hover-color: var(--brand-primary-deemphasized);
+
+    --card-bg: var(--neutral-extreme-deemphasized);
+    --panel-bg: var(--neutral-extreme-deemphasized-75);
+
+    --overlay-bg: var(--neutral-extreme-emphasized-75);
+    --overlay-bg-deemphasized: var(--neutral-extreme-emphasized-50);
+    --overlay-bg-emphasized: var(--neutral-extreme-emphasized);
+
+    --default-shadow-color: var(--neutral-extreme-deemphasized-75);
+
+    --form-box-shadow: inset 0 #{$border-width} #{$tiny} var(--overlay-bg);
+    --form-box-shadow-focus: inset 0 #{$border-width} #{$tiny} var(--overlay-bg),
+        0 0 #{$xxsmall} var(--brand-primary-emphasized);
+
+    &.color-scheme--dark {
+        --neutral-extreme-deemphasized: #{$black};
+        --neutral-extreme-deemphasized-25: #{transparentize($black, 0.75)};
+        --neutral-extreme-deemphasized-50: #{transparentize($black, 0.5)};
+        --neutral-extreme-deemphasized-75: #{transparentize($black, 0.25)};
+
+        --neutral-strong-deemphasized: #{$gray-extra-dark};
+        --neutral-strong-deemphasized-25: #{transparentize(
+                $gray-extra-dark,
+                0.75
+            )};
+        --neutral-strong-deemphasized-50: #{transparentize(
+                $gray-extra-dark,
+                0.5
+            )};
+        --neutral-strong-deemphasized-75: #{transparentize(
+                $gray-extra-dark,
+                0.25
+            )};
+
+        --neutral-deemphasized: #{$gray-dark};
+        --neutral-deemphasized-25: #{transparentize($gray-dark, 0.75)};
+        --neutral-deemphasized-50: #{transparentize($gray-dark, 0.5)};
+        --neutral-deemphasized-75: #{transparentize($gray-dark, 0.25)};
+
+        --neutral: #{$gray};
+        --neutral-25: #{transparentize($gray, 0.75)};
+        --neutral-50: #{transparentize($gray, 0.5)};
+        --neutral-75: #{transparentize($gray, 0.25)};
+
+        --neutral-emphasized: #{$gray-light};
+        --neutral-emphasized-25: #{transparentize($gray-light, 0.75)};
+        --neutral-emphasized-50: #{transparentize($gray-light, 0.5)};
+        --neutral-emphasized-75: #{transparentize($gray-dark, 0.25)};
+
+        --neutral-strong-emphasized: #{$gray-extra-light};
+        --neutral-strong-emphasized-25: #{transparentize(
+                $gray-extra-light,
+                0.75
+            )};
+        --neutral-strong-emphasized-50: #{transparentize($gray-extra-light, 0.5)};
+        --neutral-strong-emphasized-75: #{transparentize(
+                $gray-extra-light,
+                0.25
+            )};
+
+        --neutral-extreme-emphasized: #{$white};
+        --neutral-extreme-emphasized-25: #{transparentize($white, 0.75)};
+        --neutral-extreme-emphasized-50: #{transparentize($white, 0.5)};
+        --neutral-extreme-emphasized-75: #{transparentize($white, 0.25)};
+
+        --brand-primary: #{$brand-primary-mod};
+        --brand-primary-25: #{transparentize($brand-primary-mod, 0.75)};
+        --brand-primary-50: #{transparentize($brand-primary-mod, 0.5)};
+        --brand-primary-75: #{transparentize($brand-primary-mod, 0.25)};
+
+        --brand-primary-deemphasized: #{$brand-primary-mod-dark};
+        --brand-primary-deemphasized-25: #{transparentize(
+                $brand-primary-mod-dark,
+                0.75
+            )};
+        --brand-primary-deemphasized-50: #{transparentize(
+                $brand-primary-mod-dark,
+                0.5
+            )};
+        --brand-primary-deemphasized-75: #{transparentize(
+                $brand-primary-mod-dark,
+                0.25
+            )};
+
+        --brand-primary-emphasized: #{$brand-primary-mod-light};
+        --brand-primary-emphasized-25: #{transparentize(
+                $brand-primary-mod-light,
+                0.75
+            )};
+        --brand-primary-emphasized-50: #{transparentize(
+                $brand-primary-mod-light,
+                0.5
+            )};
+        --brand-primary-emphasized-75: #{transparentize(
+                $brand-primary-mod-light,
+                0.25
+            )};
+
+        --brand-secondary: #{$brand-secondary-mod};
+        --brand-secondary-25: #{transparentize($brand-secondary-mod, 0.75)};
+        --brand-secondary-50: #{transparentize($brand-secondary-mod, 0.5)};
+        --brand-secondary-75: #{transparentize($brand-secondary-mod, 0.25)};
+
+        --brand-secondary-deemphasized: #{$brand-secondary-mod-dark};
+        --brand-secondary-deemphasized-25: #{transparentize(
+                $brand-secondary-mod-dark,
+                0.75
+            )};
+        --brand-secondary-deemphasized-50: #{transparentize(
+                $brand-secondary-mod-dark,
+                0.5
+            )};
+        --brand-secondary-deemphasized-75: #{transparentize(
+                $brand-secondary-mod-dark,
+                0.25
+            )};
+
+        --brand-secondary-emphasized: #{$brand-secondary-mod-light};
+        --brand-secondary-emphasized-25: #{transparentize(
+                $brand-secondary-mod-light,
+                0.75
+            )};
+        --brand-secondary-emphasized-50: #{transparentize(
+                $brand-secondary-mod-light,
+                0.5
+            )};
+        --brand-secondary-emphasized-75: #{transparentize(
+                $brand-secondary-mod-light,
+                0.25
+            )};
+
+        --highlight-success: #{$highlight-success-mod};
+        --highlight-success-25: #{transparentize($highlight-success-mod, 0.75)};
+        --highlight-success-50: #{transparentize($highlight-success-mod, 0.5)};
+        --highlight-success-75: #{transparentize($highlight-success-mod, 0.25)};
+
+        --highlight-success-deemphasized: #{$highlight-success-mod-dark};
+        --highlight-success-deemphasized-25: #{transparentize(
+                $highlight-success-mod-dark,
+                0.75
+            )};
+        --highlight-success-deemphasized-50: #{transparentize(
+                $highlight-success-mod-dark,
+                0.5
+            )};
+        --highlight-success-deemphasized-75: #{transparentize(
+                $highlight-success-mod-dark,
+                0.25
+            )};
+
+        --highlight-success-emphasized: #{$highlight-success-mod-light};
+        --highlight-success-emphasized-25: #{transparentize(
+                $highlight-success-mod-light,
+                0.75
+            )};
+        --highlight-success-emphasized-50: #{transparentize(
+                $highlight-success-mod-light,
+                0.5
+            )};
+        --highlight-success-emphasized-75: #{transparentize(
+                $highlight-success-mod-light,
+                0.25
+            )};
+
+        --highlight-notice: #{$highlight-notice-mod};
+        --highlight-notice-25: #{transparentize($highlight-notice-mod, 0.75)};
+        --highlight-notice-50: #{transparentize($highlight-notice-mod, 0.5)};
+        --highlight-notice-75: #{transparentize($highlight-notice-mod, 0.25)};
+
+        --highlight-notice-deemphasized: #{$highlight-notice-mod-dark};
+        --highlight-notice-deemphasized-25: #{transparentize(
+                $highlight-notice-mod-dark,
+                0.75
+            )};
+        --highlight-notice-deemphasized-50: #{transparentize(
+                $highlight-notice-mod-dark,
+                0.5
+            )};
+        --highlight-notice-deemphasized-75: #{transparentize(
+                $highlight-notice-mod-dark,
+                0.25
+            )};
+
+        --highlight-notice-emphasized: #{$highlight-notice-mod-light};
+        --highlight-notice-emphasized-25: #{transparentize(
+                $highlight-notice-mod-light,
+                0.75
+            )};
+        --highlight-notice-emphasized-50: #{transparentize(
+                $highlight-notice-mod-light,
+                0.5
+            )};
+        --highlight-notice-emphasized-75: #{transparentize(
+                $highlight-notice-mod-light,
+                0.25
+            )};
+
+        --highlight-error: #{$highlight-error-mod};
+        --highlight-error-25: #{transparentize($highlight-error-mod, 0.75)};
+        --highlight-error-50: #{transparentize($highlight-error-mod, 0.5)};
+        --highlight-error-75: #{transparentize($highlight-error-mod, 0.25)};
+
+        --highlight-error-deemphasized: #{$highlight-error-mod-dark};
+        --highlight-error-deemphasized-25: #{transparentize(
+                $highlight-error-mod-dark,
+                0.75
+            )};
+        --highlight-error-deemphasized-50: #{transparentize(
+                $highlight-error-mod-dark,
+                0.5
+            )};
+        --highlight-error-deemphasized-75: #{transparentize(
+                $highlight-error-mod-dark,
+                0.25
+            )};
+
+        --highlight-error-emphasized: #{$highlight-error-mod-light};
+        --highlight-error-emphasized-25: #{transparentize(
+                $highlight-error-mod-light,
+                0.75
+            )};
+        --highlight-error-emphasized-50: #{transparentize(
+                $highlight-error-mod-light,
+                0.5
+            )};
+        --highlight-error-emphasized-75: #{transparentize(
+                $highlight-error-mod-light,
+                0.25
+            )};
+
+        --highlight-info: #{$highlight-info-mod};
+        --highlight-info-25: #{transparentize($highlight-info-mod, 0.75)};
+        --highlight-info-50: #{transparentize($highlight-info-mod, 0.5)};
+        --highlight-info-75: #{transparentize($highlight-info-mod, 0.25)};
+
+        --highlight-info-deemphasized: #{$highlight-info-mod-dark};
+        --highlight-info-deemphasized-25: #{transparentize(
+                $highlight-info-mod-dark,
+                0.75
+            )};
+        --highlight-info-deemphasized-50: #{transparentize(
+                $highlight-info-mod-dark,
+                0.5
+            )};
+        --highlight-info-deemphasized-75: #{transparentize(
+                $highlight-info-mod-dark,
+                0.25
+            )};
+
+        --highlight-info-emphasized: #{$highlight-info-mod-light};
+        --highlight-info-emphasized-25: #{transparentize(
+                $highlight-info-mod-light,
+                0.75
+            )};
+        --highlight-info-emphasized-50: #{transparentize(
+                $highlight-info-mod-light,
+                0.5
+            )};
+        --highlight-info-emphasized-75: #{transparentize(
+                $highlight-info-mod-light,
+                0.25
+            )};
+
+        --default-shadow-color: var(--neutral-extreme-emphasized-75);
+    }
+
+    &.color-scheme--light {
+        --neutral-extreme-deemphasized: #{$white};
+        --neutral-extreme-deemphasized-25: #{transparentize($white, 0.75)};
+        --neutral-extreme-deemphasized-50: #{transparentize($white, 0.5)};
+        --neutral-extreme-deemphasized-75: #{transparentize($white, 0.25)};
+
+        --neutral-strong-deemphasized: #{$gray-extra-light};
+        --neutral-strong-deemphasized-25: #{transparentize(
+                $gray-extra-light,
+                0.75
+            )};
+        --neutral-strong-deemphasized-50: #{transparentize(
+                $gray-extra-light,
+                0.5
+            )};
+        --neutral-strong-deemphasized-75: #{transparentize(
+                $gray-extra-light,
+                0.25
+            )};
+
+        --neutral-deemphasized: #{$gray-light};
+        --neutral-deemphasized-25: #{transparentize($gray-light, 0.75)};
+        --neutral-deemphasized-50: #{transparentize($gray-light, 0.5)};
+        --neutral-deemphasized-75: #{transparentize($gray-light, 0.25)};
+
+        --neutral: #{$gray};
+        --neutral-25: #{transparentize($gray, 0.75)};
+        --neutral-50: #{transparentize($gray, 0.5)};
+        --neutral-75: #{transparentize($gray, 0.25)};
+
+        --neutral-emphasized: #{$gray-dark};
+        --neutral-emphasized-25: #{transparentize($gray-dark, 0.75)};
+        --neutral-emphasized-50: #{transparentize($gray-dark, 0.5)};
+        --neutral-emphasized-75: #{transparentize($gray-dark, 0.25)};
+
+        --neutral-strong-emphasized: #{$gray-extra-dark};
+        --neutral-strong-emphasized-25: #{transparentize($gray-extra-dark, 0.75)};
+        --neutral-strong-emphasized-50: #{transparentize($gray-extra-dark, 0.5)};
+        --neutral-strong-emphasized-75: #{transparentize($gray-extra-dark, 0.25)};
+
+        --neutral-extreme-emphasized: #{$black};
+        --neutral-extreme-emphasized-25: #{transparentize($black, 0.75)};
+        --neutral-extreme-emphasized-50: #{transparentize($black, 0.5)};
+        --neutral-extreme-emphasized-75: #{transparentize($black, 0.25)};
+
+        --brand-primary: #{$brand-primary};
+        --brand-primary-25: #{transparentize($brand-primary, 0.75)};
+        --brand-primary-50: #{transparentize($brand-primary, 0.5)};
+        --brand-primary-75: #{transparentize($brand-primary, 0.25)};
+
+        --brand-primary-deemphasized: #{$brand-primary-light};
+        --brand-primary-deemphasized-25: #{transparentize(
+                $brand-primary-light,
+                0.75
+            )};
+        --brand-primary-deemphasized-50: #{transparentize(
+                $brand-primary-light,
+                0.5
+            )};
+        --brand-primary-deemphasized-75: #{transparentize(
+                $brand-primary-light,
+                0.25
+            )};
+
+        --brand-primary-emphasized: #{$brand-primary-dark};
+        --brand-primary-emphasized-25: #{transparentize(
+                $brand-primary-dark,
+                0.75
+            )};
+        --brand-primary-emphasized-50: #{transparentize(
+                $brand-primary-dark,
+                0.5
+            )};
+        --brand-primary-emphasized-75: #{transparentize(
+                $brand-primary-dark,
+                0.25
+            )};
+
+        --brand-secondary: #{$brand-secondary};
+        --brand-secondary-25: #{transparentize($brand-secondary, 0.75)};
+        --brand-secondary-50: #{transparentize($brand-secondary, 0.5)};
+        --brand-secondary-75: #{transparentize($brand-secondary, 0.25)};
+
+        --brand-secondary-deemphasized: #{$brand-secondary-light};
+        --brand-secondary-deemphasized-25: #{transparentize(
+                $brand-secondary-light,
+                0.75
+            )};
+        --brand-secondary-deemphasized-50: #{transparentize(
+                $brand-secondary-light,
+                0.5
+            )};
+        --brand-secondary-deemphasized-75: #{transparentize(
+                $brand-secondary-light,
+                0.25
+            )};
+
+        --brand-secondary-emphasized: #{$brand-secondary-dark};
+        --brand-secondary-emphasized-25: #{transparentize(
+                $brand-secondary-dark,
+                0.75
+            )};
+        --brand-secondary-emphasized-50: #{transparentize(
+                $brand-secondary-dark,
+                0.5
+            )};
+        --brand-secondary-emphasized-75: #{transparentize(
+                $brand-secondary-dark,
+                0.25
+            )};
+
+        --highlight-success: #{$highlight-success};
+        --highlight-success-25: #{transparentize($highlight-success, 0.75)};
+        --highlight-success-50: #{transparentize($highlight-success, 0.5)};
+        --highlight-success-75: #{transparentize($highlight-success, 0.25)};
+
+        --highlight-success-deemphasized: #{$highlight-success-light};
+        --highlight-success-deemphasized-25: #{transparentize(
+                $highlight-success-light,
+                0.75
+            )};
+        --highlight-success-deemphasized-50: #{transparentize(
+                $highlight-success-light,
+                0.5
+            )};
+        --highlight-success-deemphasized-75: #{transparentize(
+                $highlight-success-light,
+                0.25
+            )};
+
+        --highlight-success-emphasized: #{$highlight-success-dark};
+        --highlight-success-emphasized-25: #{transparentize(
+                $highlight-success-dark,
+                0.75
+            )};
+        --highlight-success-emphasized-50: #{transparentize(
+                $highlight-success-dark,
+                0.5
+            )};
+        --highlight-success-emphasized-75: #{transparentize(
+                $highlight-success-dark,
+                0.25
+            )};
+
+        --highlight-notice: #{$highlight-notice};
+        --highlight-notice-25: #{transparentize($highlight-notice, 0.75)};
+        --highlight-notice-50: #{transparentize($highlight-notice, 0.5)};
+        --highlight-notice-75: #{transparentize($highlight-notice, 0.25)};
+
+        --highlight-notice-deemphasized: #{$highlight-notice-light};
+        --highlight-notice-deemphasized-25: #{transparentize(
+                $highlight-notice-light,
+                0.75
+            )};
+        --highlight-notice-deemphasized-50: #{transparentize(
+                $highlight-notice-light,
+                0.5
+            )};
+        --highlight-notice-deemphasized-75: #{transparentize(
+                $highlight-notice-light,
+                0.25
+            )};
+
+        --highlight-notice-emphasized: #{$highlight-notice-dark};
+        --highlight-notice-emphasized-25: #{transparentize(
+                $highlight-notice-dark,
+                0.75
+            )};
+        --highlight-notice-emphasized-50: #{transparentize(
+                $highlight-notice-dark,
+                0.5
+            )};
+        --highlight-notice-emphasized-75: #{transparentize(
+                $highlight-notice-dark,
+                0.25
+            )};
+
+        --highlight-error: #{$highlight-error};
+        --highlight-error-25: #{transparentize($highlight-error, 0.75)};
+        --highlight-error-50: #{transparentize($highlight-error, 0.5)};
+        --highlight-error-75: #{transparentize($highlight-error, 0.25)};
+
+        --highlight-error-deemphasized: #{$highlight-error-light};
+        --highlight-error-deemphasized-25: #{transparentize(
+                $highlight-error-light,
+                0.75
+            )};
+        --highlight-error-deemphasized-50: #{transparentize(
+                $highlight-error-light,
+                0.5
+            )};
+        --highlight-error-deemphasized-75: #{transparentize(
+                $highlight-error-light,
+                0.25
+            )};
+
+        --highlight-error-emphasized: #{$highlight-error-dark};
+        --highlight-error-emphasized-25: #{transparentize(
+                $highlight-error-dark,
+                0.75
+            )};
+        --highlight-error-emphasized-50: #{transparentize(
+                $highlight-error-dark,
+                0.5
+            )};
+        --highlight-error-emphasized-75: #{transparentize(
+                $highlight-error-dark,
+                0.25
+            )};
+
+        --highlight-info: #{$highlight-info};
+        --highlight-info-25: #{transparentize($highlight-info, 0.75)};
+        --highlight-info-50: #{transparentize($highlight-info, 0.5)};
+        --highlight-info-75: #{transparentize($highlight-info, 0.25)};
+
+        --highlight-info-deemphasized: #{$highlight-info-light};
+        --highlight-info-deemphasized-25: #{transparentize(
+                $highlight-info-light,
+                0.75
+            )};
+        --highlight-info-deemphasized-50: #{transparentize(
+                $highlight-info-light,
+                0.5
+            )};
+        --highlight-info-deemphasized-75: #{transparentize(
+                $highlight-info-light,
+                0.25
+            )};
+
+        --highlight-info-emphasized: #{$highlight-info-dark};
+        --highlight-info-emphasized-25: #{transparentize(
+                $highlight-info-dark,
+                0.75
+            )};
+        --highlight-info-emphasized-50: #{transparentize(
+                $highlight-info-dark,
+                0.5
+            )};
+        --highlight-info-emphasized-75: #{transparentize(
+                $highlight-info-dark,
+                0.25
+            )};
+
+        --default-shadow-color: var(--neutral-extreme-deemphasized-75);
+    }
+
+    &.color-scheme--system {
+        @media (prefers-color-scheme: dark) {
+        }
+        @media (prefers-color-scheme: light) {
+        }
+    }
+}

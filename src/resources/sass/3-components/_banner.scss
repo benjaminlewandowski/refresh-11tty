@@ -1,0 +1,126 @@
+.banner {
+    padding: $xsmall $xxsmall;
+
+    background-color: var(--neutral-extreme-deemphasized);
+    border: $tiny solid var(--neutral-deemphasized);
+    border-radius: $xxsmall;
+
+    & strong,
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6,
+    & p,
+    & em {
+        color: var(--neutral-strong-emphasized);
+    }
+
+    &:not(:last-child) {
+        margin-bottom: $xsmall;
+    }
+
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+
+    & button,
+    & .btn {
+        padding: $tiny $xxsmall;
+
+        color: var(--neutral-strong-emphasized);
+
+        background-color: var(--neutral-strong-deemphasized);
+    }
+
+    &.is-primary {
+        background-color: var(--brand-primary-deemphasized);
+        border-color: var(--brand-primary-emphasized);
+
+        & h1,
+        & h2,
+        & h3,
+        & h4,
+        & h5,
+        & h6,
+        & p {
+            color: var(--brand-primary-emphasized);
+        }
+    }
+
+    &.is-secondary {
+        background-color: var(--brand-secondary-deemphasized);
+        border-color: var(--brand-secondary-emphasized);
+
+        & h1,
+        & h2,
+        & h3,
+        & h4,
+        & h5,
+        & h6,
+        & p {
+            color: var(--brand-secondary-emphasized);
+        }
+    }
+
+    &.is-success {
+        background-color: var(--highlight-success-deemphasized);
+        border-color: var(--highlight-success-emphasized);
+
+        & h1,
+        & h2,
+        & h3,
+        & h4,
+        & h5,
+        & h6,
+        & p {
+            color: var(--highlight-success-emphasized);
+        }
+    }
+
+    &.is-error {
+        background-color: var(--highlight-error-deemphasized);
+        border-color: var(--highlight-error-emphasized);
+
+        & h1,
+        & h2,
+        & h3,
+        & h4,
+        & h5,
+        & h6,
+        & p {
+            color: var(--highlight-error-emphasized);
+        }
+    }
+
+    &.is-notice {
+        background-color: var(--highlight-notice-deemphasized);
+        border-color: var(--highlight-notice-emphasized);
+
+        & h1,
+        & h2,
+        & h3,
+        & h4,
+        & h5,
+        & h6,
+        & p {
+            color: var(--highlight-notice-emphasized);
+        }
+    }
+
+    &.is-info {
+        background-color: var(--highlight-info-deemphasized);
+        border-color: var(--highlight-info-emphasized);
+
+        & h1,
+        & h2,
+        & h3,
+        & h4,
+        & h5,
+        & h6,
+        & p {
+            color: var(--highlight-info-emphasized);
+        }
+    }
+}

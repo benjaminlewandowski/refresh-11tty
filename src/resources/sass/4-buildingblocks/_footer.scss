@@ -1,0 +1,17 @@
+.footer {
+    height: $huge;
+
+    background-color: var(--neutral-extreme-deemphasized);
+    border-top: var(--neutral) $tiny solid;
+}
+
+.footer__inner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 $xxlarge;
+
+    p {
+        margin: 0;
+    }
+}

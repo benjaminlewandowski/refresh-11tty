@@ -1,0 +1,48 @@
+$table-header-bg: #{var(--brand-primary-deemphasized-50)};
+$table-header-color: #{var(--text-color-emphasized)};
+$table-row-bg: #{var(--panel-bg)};
+$table-row-color: #{var(--text-color)};
+$table-row-highlight-bg: #{var(--brand-primary-deemphasized-25)};
+
+table {
+    width: 100%;
+    margin: $xsmall 0;
+
+    text-align: left;
+
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+thead {
+    line-height: $normal;
+    vertical-align: bottom;
+}
+
+tbody {
+    vertical-align: top;
+}
+
+tr {
+    border-bottom: var(--border);
+}
+
+th,
+td {
+    padding: $xsmall $xsmall $xsmall $xxsmall;
+}
+
+th {
+    font-weight: $font-bold-weight;
+    text-align: inherit;
+}
+
+caption {
+    padding-top: $small;
+    padding-bottom: $small;
+
+    color: var(--neutral);
+    text-align: left;
+
+    caption-side: bottom;
+}

@@ -1,0 +1,40 @@
+$weight--thin: 100;
+$weight--extra-light: 200;
+$weight--light: 300;
+$weight--normal: 400;
+$weight--medium: 500;
+$weight--semi-bold: 600;
+$weight--bold: 700;
+$weight--extra-bold: 800;
+$weight--black: 900;
+
+$font-size-base: $ExtraSmallRoot;
+$font-base-weight: $weight--normal;
+$font-light-weight: $weight--light;
+$font-bold-weight: $weight--bold;
+$font-base: Inter;
+$font-mono: "Fira Code";
+$font-head: Oswald;
+$font-stack-base: $font-base, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-stack-head: $font-head, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-stack-mono: $font-mono, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+$font-stack-quote: Cochin, Georgia, "Times New Roman", serif;
+$border-radius: $xsmall;
+
+$font-size-h1: $xxlarge;
+$font-size-h2: $xlarge;
+$font-size-h3: $xlarge;
+$font-size-h4: $large;
+$font-size-h5: $large;
+$font-size-h6: $normal;
+$font-weight-h1: $font-bold-weight;
+$font-weight-h2: $font-bold-weight;
+$font-weight-h3: $font-base-weight;
+$font-weight-h4: $font-bold-weight;
+$font-weight-h5: $font-base-weight;
+$font-weight-h6: $font-base-weight;

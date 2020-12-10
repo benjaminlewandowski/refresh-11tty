@@ -1,0 +1,29 @@
+<aside class="sidebar {% if 'left' in sidebar %} is-left{% endif %}{% if 'right' in sidebar %} is-right{% endif %}">
+    <div class="when">
+        <h2>Öffnungszeiten:</h2>
+
+        <p>Montag sowie Mittwoch - Samstag</p>
+        <p>von
+            <strong>11. 30 Uhr – 22. 00 Uhr</strong>
+            durchgehend warme Küche.</p>
+        <p>Das Restaurant ist offen, bis der letzte Gast geht</p>
+
+        <p>Am Dienstag ruhe ich mich aus.</p>
+    </div>
+    <div class="additionalinfo">
+        <p>Bitte haben Sie Verständnis, dass ich keine EC-und Kreditkarten akzeptiere.</p>
+    </div>
+    <div class="where">
+        <h2>Restaurant Speisekammer</h2>
+        <address>
+            Alte Gasse 2,<br>
+            61462 Königstein/Taunus<br>
+            Telefon
+            <a href="tel:0617424452">06174-24452</a>
+        </address>
+    </div>
+
+    {% include './site-social.njk' %}
+
+    {% include './site-subnavigation.njk' %}
+</aside>

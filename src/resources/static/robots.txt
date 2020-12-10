@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://refresh11.netlify.com/sitemap.xml

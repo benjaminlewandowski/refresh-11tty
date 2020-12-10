@@ -1,0 +1,33 @@
+.avatar {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+    object-position: center;
+
+    & img {
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    &.has-border {
+        border: $xxsmall solid var(--text-color);
+    }
+
+    &.is-large {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    &.is-small {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    &.is-circle {
+        border-radius: 100%;
+    }
+
+    &.is-rounded {
+        border-radius: $xsmall;
+    }
+}

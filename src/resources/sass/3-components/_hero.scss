@@ -1,0 +1,27 @@
+.header {
+    &.is-hero {
+        position: absolute;
+        top: -4rem;
+
+        box-shadow: none;
+        transform: translateY(4rem);
+
+        transition: top $duration $timing 0ms, background-color $duration $timing 0ms,
+            box-shadow $duration $timing 0ms;
+
+        &:not(.visible-navigation) {
+            background-color: var(--neutral-strong-deemphasized);
+
+            & .mainnavigation__menu {
+                background-color: var(--neutral-strong-deemphasized);
+            }
+        }
+    }
+
+    &.hero-fade {
+        top: 0;
+
+        transition: top $duration $timing 0ms, background-color $duration $timing 0ms,
+            box-shadow $duration $timing 0ms;
+    }
+}

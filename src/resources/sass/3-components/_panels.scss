@@ -1,0 +1,17 @@
+$panel-header-bg: #{var(--neutral-deemphasized)};
+$panel-header-font-size: $small;
+$panel-header-color: #{var(--text-color--emphasized)};
+$panel-border: #{var(--border-color)};
+$panel-shadow: $base-shadow;
+
+.panel {
+    border: 1px solid $panel-header-color;
+    box-shadow: $panel-shadow;
+
+    & header {
+        color: $panel-header-color;
+        font-size: $panel-header-font-size;
+
+        background-color: $panel-header-bg;
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "mount": {
+        "build": "/",
+        "dist": "/",
+        "src/resources/javascript": "/"
+    },
+
+    "experiments": {
+        "optimize": {
+            "bundle": true,
+            "minify": true,
+            "target": "es2017"
+        }
+    },
+    "plugins": [
+        [
+            "@snowpack/plugin-optimize"
+        ],
+        [
+            "@snowpack/plugin-postcss"
+        ],
+        [
+            "@snowpack/plugin-typescript"
+        ],
+        [
+            "@snowpack/plugin-run-script",
+            {
+                "cmd": "tsc ./src/resources/typescript/index.ts --outdir dist/js/",
+                "watch": "tsc ./src/resources/typescript/index.ts --outdir build/js/ --watch",
+                "output": "stream"
+            }
+        ],
+        [
+            "@snowpack/plugin-run-script",
+            {
+                "cmd": "postcss src/resources/sass/*.scss --dir dist/css --ext css",
+                "watch": "postcss src/resources/sass/*.scss --dir build/css --ext css --quiet --watch",
+                "output": "stream"
+            }
+        ],
+        [
+            "@snowpack/plugin-run-script",
+            {
+                "cmd": "eleventy --quiet",
+                "watch": "eleventy --quiet --watch",
+                "output": "stream"
+            }
+        ],
+        [
+            "@snowpack/plugin-optimize",
+            {
+                "preloadModules": true,
+                "target": "es5"
+            }
+        ]
+    ],
+    "devOptions": {
+        "out": "dist",
+        "hmrDelay": 300
+    }
+}

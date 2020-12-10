@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" class="no-js">
+    <head>
+        {% include './../components/html-header.njk' %}
+    </head>
+
+    <body class="loading {% block type %}is-page{% endblock%}{% if body_class %} {{ body_class }}{% endif %}{% if has_hero %} has-hero{% endif %}">
+        <a class="sr-only" href="#main">Skip to content</a>
+
+        {% include 'components/loader.njk' %}
+
+        {# include header #}
+        {% include "components/header.njk" %}
+
+        <main id="wrapper" class="wrapper">
+            {# include content #}
+            {{ content | safe }}
+        </main>
+
+        {# include footer #}
+        {% include "components/footer.njk" %}
+
+        {% include "components/stylesheets.njk" %}
+    </body>
+</html>

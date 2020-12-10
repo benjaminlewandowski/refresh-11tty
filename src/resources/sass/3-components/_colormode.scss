@@ -1,0 +1,123 @@
+.js-colorscheme-toggle {
+    z-index: 100;
+
+    width: $xxlarge;
+    height: $xxlarge;
+    padding: $xxsmall;
+
+    color: var(--neutral-extreme-deemphasized);
+
+    background: var(--brand-primary);
+    border: $tiny solid var(--brand-primary);
+    border-radius: $xxsmall;
+    cursor: pointer;
+
+    appearance: none;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 $xxsmall 0 var(--brand-primary);
+    }
+
+    & svg {
+        object-fit: cover;
+    }
+
+    & path {
+        fill: currentColor;
+    }
+}
+
+.js-colorscheme-toggle > span {
+    display: none;
+    width: 100%;
+}
+
+.color-scheme--dark .js-colorscheme-toggle > .dark,
+.color-scheme--light .js-colorscheme-toggle > .light,
+.color-scheme--system .js-colorscheme-toggle > .system {
+    display: inline-block;
+}
+
+.color-scheme--dark .js-colorscheme-toggle > .dark,
+.color-scheme--light .js-colorscheme-toggle > .light,
+.color-scheme--system .js-colorscheme-toggle > .system {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.js-colorscheme-toggle:hover .text {
+    display: block;
+}
+
+.js-colorscheme-toggle .text {
+    position: fixed;
+    top: 3.25rem;
+    right: 2rem;
+
+    display: none;
+    padding: 0.25rem;
+
+    line-height: 1.5rem;
+
+    background: var(--card-bg);
+    border-radius: 0.25rem;
+}
+
+.js-colorscheme-toggle .text::after {
+    position: absolute;
+    top: -0.125rem;
+    right: 0.625rem;
+
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+
+    background-color: var(--card-bg);
+    transform: rotateZ(45deg);
+
+    content: "";
+}
+
+.js-colorscheme-toggle > span {
+    position: relative;
+}
+
+.icon {
+    position: relative;
+
+    width: 100%;
+}
+
+:root {
+    &.color-scheme--dark {
+        #js-colorscheme-toggle .system {
+            display: none;
+        }
+
+        #js-colorscheme-toggle .light {
+            display: none;
+        }
+    }
+
+    &.color-scheme--light {
+        #js-colorscheme-toggle .dark {
+            display: none;
+        }
+
+        #js-colorscheme-toggle .system {
+            display: none;
+        }
+    }
+
+    &.color-scheme--system {
+        #js-colorscheme-toggle .dark {
+            display: none;
+        }
+
+        #js-colorscheme-toggle .light {
+            display: none;
+        }
+    }
+}
