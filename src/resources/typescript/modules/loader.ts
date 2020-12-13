@@ -17,13 +17,13 @@ const loader = function loader() {
 
             setTimeout(function () {
                 selectors.loader.remove();
-            }, 500);
+            }, 400);
         };
 
         document.body.onload = function () {
             setTimeout(function () {
                 removeLoader();
-            }, 250);
+            }, 100);
         };
 
         console.info("loader removed");

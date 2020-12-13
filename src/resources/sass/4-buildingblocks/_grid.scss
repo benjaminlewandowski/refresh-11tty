@@ -6,7 +6,7 @@
 }
 
 main.wrapper {
-    min-height: calc(100vh - #{$xhuge} - #{$huge});
+    min-height: calc(100vh - #{$xhuge} - #{$xhuge});
     margin-top: $xhuge;
     padding: $normal $xxlarge;
 }

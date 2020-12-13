@@ -1,15 +1,16 @@
 .footer {
-    height: $huge;
+    min-height: $xhuge;
 
-    background-color: var(--neutral-extreme-deemphasized);
-    border-top: var(--neutral) $tiny solid;
+    background-color: var(--neutral-extreme-deemphasized-75);
+    border-top: var(--neutral) $tiny solid;display: flex;
 }
 
 .footer__inner {
     display: flex;
-    align-items: center;
     height: 100%;
-    padding: 0 $xxlarge;
+    padding: $xsmall $xxlarge;
+    align-self: center;
+    margin: auto;
 
     p {
         margin: 0;

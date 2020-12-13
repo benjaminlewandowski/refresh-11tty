@@ -87,6 +87,7 @@ button,
         text-decoration: none;
 
         background-color: var(--neutral-strong-deemphasized);
+        opacity: 0.8;
     }
 
     &:not(:disabled) {
@@ -105,14 +106,6 @@ button,
 
         background-color: var(--brand-primary);
         border-color: var(--brand-primary-emphasized);
-
-        &:hover {
-            color: var(--neutral-extreme-deemphasized);
-            text-shadow: 0 0 $xsmall var(--neutral-extreme-emphasized);
-
-            background-color: var(--brand-primary-emphasized);
-            border-color: var(--brand-primary-emphasized);
-        }
     }
 
     &.is-secondary {
@@ -120,14 +113,6 @@ button,
 
         background-color: var(--brand-secondary);
         border-color: var(--brand-secondary-emphasized);
-
-        &:hover {
-            color: var(--neutral-extreme-deemphasized);
-            text-shadow: 0 0 $xsmall var(--neutral-extreme-emphasized);
-
-            background-color: var(--brand-secondary-emphasized);
-            border-color: var(--brand-secondary-emphasized);
-        }
     }
 
     &.is-success {
@@ -135,14 +120,6 @@ button,
 
         background-color: var(--highlight-success);
         border-color: var(--highlight-success);
-
-        &:hover {
-            color: var(--neutral-extreme-deemphasized);
-            text-shadow: 0 0 $xsmall var(--neutral-extreme-emphasized);
-
-            background-color: var(--highlight-success-emphasized);
-            border-color: var(--highlight-success-emphasized);
-        }
     }
 
     &.is-info {
@@ -150,14 +127,6 @@ button,
 
         background-color: var(--highlight-info);
         border-color: var(--highlight-info);
-
-        &:hover {
-            color: var(--neutral-extreme-deemphasized);
-            text-shadow: 0 0 $xsmall var(--neutral-extreme-emphasized);
-
-            background-color: var(--highlight-info-emphasized);
-            border-color: var(--highlight-info-emphasized);
-        }
     }
 
     &.is-notice {
@@ -165,14 +134,6 @@ button,
 
         background-color: var(--highlight-notice);
         border-color: var(--highlight-notice);
-
-        &:hover {
-            color: var(--neutral-extreme-deemphasized);
-            text-shadow: 0 0 $xsmall var(--neutral-extreme-emphasized);
-
-            background-color: var(--highlight-notice-emphasized);
-            border-color: var(--highlight-notice-emphasized);
-        }
     }
 
     &.is-error {
@@ -180,42 +141,17 @@ button,
 
         background-color: var(--highlight-error);
         border-color: var(--highlight-error);
-
-        &:hover {
-            color: var(--neutral-extreme-deemphasized);
-            text-shadow: 0 0 $xsmall var(--neutral-extreme-emphasized);
-
-            background-color: var(--highlight-error-emphasized);
-            border-color: var(--highlight-error-emphasized);
-        }
     }
 
     &.is-outlined {
         background-color: transparent;
         border-color: var(--text-color);
 
-        &:hover {
-            color: var(--neutral-extreme-deemphasized);
-            text-shadow: 0 0 $xsmall var(--neutral-extreme-emphasized);
-
-            background-color: var(--neutral-emphasized);
-
-            border-color: var(--brand-primary-emphasized);
-        }
-
         &.is-primary {
             color: var(--brand-primary);
 
             background-color: transparent;
             border-color: var(--brand-primary);
-
-            &:hover {
-                color: var(--neutral-extreme-deemphasized);
-                text-shadow: 0 0 $xsmall var(--neutral-extreme-emphasized);
-
-                background-color: var(--brand-primary-deemphasized);
-                border-color: var(--brand-primary-emphasized);
-            }
         }
 
         &.is-secondary {
@@ -223,14 +159,6 @@ button,
 
             background-color: transparent;
             border-color: var(--brand-secondary);
-
-            &:hover {
-                color: var(--neutral-extreme-deemphasized);
-                text-shadow: 0 0 $xsmall var(--neutral-extreme-emphasized);
-
-                background-color: var(--brand-secondary-deemphasized);
-                border-color: var(--brand-secondary-emphasized);
-            }
         }
 
         &.is-success {
@@ -238,14 +166,6 @@ button,
 
             background-color: transparent;
             border-color: var(--highlight-success-emphasized);
-
-            &:hover {
-                color: var(--neutral-extreme-deemphasized);
-                text-shadow: 0 0 $xsmall var(--neutral-extreme-emphasized);
-
-                background-color: var(--highlight-success-deemphasized);
-                border-color: var(--highlight-success-emphasized);
-            }
         }
 
         &.is-info {
@@ -253,14 +173,6 @@ button,
 
             background-color: transparent;
             border-color: var(--highlight-info-emphasized);
-
-            &:hover {
-                color: var(--neutral-extreme-deemphasized);
-                text-shadow: 0 0 $xsmall var(--neutral-extreme-emphasized);
-
-                background-color: var(--highlight-info-deemphasized);
-                border-color: var(--highlight-info-emphasized);
-            }
         }
 
         &.is-notice {
@@ -268,14 +180,6 @@ button,
 
             background-color: transparent;
             border-color: var(--highlight-notice-emphasized);
-
-            &:hover {
-                color: var(--neutral-extreme-deemphasized);
-                text-shadow: 0 0 $xsmall var(--neutral-extreme-emphasized);
-
-                background-color: var(--highlight-notice-deemphasized);
-                border-color: var(--highlight-notice-emphasized);
-            }
         }
 
         &.is-error {
@@ -283,14 +187,6 @@ button,
 
             background-color: transparent;
             border-color: var(--highlight-error-emphasized);
-
-            &:hover {
-                color: var(--neutral-extreme-deemphasized);
-                text-shadow: 0 0 $xsmall var(--neutral-extreme-emphasized);
-
-                background-color: var(--highlight-error-deemphasized);
-                border-color: var(--highlight-error-emphasized);
-            }
         }
     }
 
