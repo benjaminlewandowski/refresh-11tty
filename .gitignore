@@ -1,4 +1,6 @@
-_site/
+build/
+dist/
+src/resources/css/
 !.vscode/extensions.json
 !.vscode/launch.json
 !.vscode/settings.json

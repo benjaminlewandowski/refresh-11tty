@@ -3,6 +3,7 @@ module.exports = {
     extends: ["stylelint-config-prettier", "stylelint-config-rational-order"],
     plugins: [
         require("postcss-preset-env"),
+        require("postcss-short"),
         require("@csstools/postcss-sass")({
             syntax: "postcss-scss",
             includePaths: [
@@ -14,23 +15,6 @@ module.exports = {
                 "./5-pages",
                 "./../../node_modules",
             ],
-        }),
-        require("postcss-short"),
-        require("postcss-utilities"),
-        require("postcss-preset-env")({
-            stage: 0,
-        }),
-        require("postcss-combine-media-query"),
-        require("cssnano")({
-            preset: [
-                "default",
-                {
-                    discardComments: {
-                        removeAll: true,
-                        mergeLonghand: false,
-                    },
-                },
-            ],
-        }),
+        })
     ],
 };

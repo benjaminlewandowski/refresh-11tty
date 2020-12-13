@@ -1,4 +1,3 @@
-const htmlMinifier = require("html-minifier");
 const eleventyPluginNavigation = require("@11ty/eleventy-navigation");
 const eleventyPluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const eleventyPluginRSS = require("@11ty/eleventy-plugin-rss");
@@ -15,30 +14,18 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(eleventyPluginBlogTools);
     eleventyConfig.addPlugin(
         eleventyPluginSEO,
-        require("./src/site/_data/site.json")
+        require("./../../../site/_data/site.json")
     );
 
     eleventyConfig.addFilter(
         "dateDisplay",
-        require("./src/site/filters/dates.js")
+        require("./../../../site/filters/dates.js")
     );
 
     eleventyConfig.addFilter(
         "htmlDateDisplay",
-        require("./src/site/filters/timestamp.js")
+        require("./../../../site/filters/timestamp.js")
     );
-
-    eleventyConfig.addTransform("htmlMinifier", (content, outputPath) => {
-        if (outputPath.endsWith(".html")) {
-            const minified = htmlMinifier.minify(content, {
-                useShortDoctype: true,
-                removeComments: true,
-                collapseWhitespace: true,
-            });
-            return minified;
-        }
-        return content;
-    });
 
     // Collections
     eleventyConfig.addCollection("blog", (collection) => {
@@ -61,24 +48,24 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addLayoutAlias("index", "layouts/special/index.njk");
     eleventyConfig.addLayoutAlias("listing", "layouts/listing.njk");
 
-    eleventyConfig.addWatchTarget("src/resources/images");
-    eleventyConfig.addWatchTarget("src/resources/static/icons");
-
-    eleventyConfig.addPassthroughCopy({ "src/resources/images": "/images" });
-    eleventyConfig.addPassthroughCopy({ "src/resources/static/icons": "/" });
-    eleventyConfig.addPassthroughCopy({
-        "src/resources/static/robots.txt": "./robots.txt",
-    });
+    eleventyConfig.addWatchTarget("./../../images");
+    eleventyConfig.addWatchTarget("./../../static/icons");
 
     eleventyConfig.addPassthroughCopy({
-        "src/resources/static/forestry/index.html": "./forestry/index.html",
+        "src/resources/images": "/images",
+    });
+    eleventyConfig.addPassthroughCopy({
+        "src/resources/static/icons": "/",
+    });
+    eleventyConfig.addPassthroughCopy({
+        "src/resources/static/robots.txt": "robots.txt",
     });
 
-    eleventyConfig.addPlugin(eleventyPluginLazyImages, {
-        preferNativeLazyLoad: true,
-        transformImgPath: (imgPath) =>
-            imgPath.replace("/images/", "html/images/"),
+    eleventyConfig.addPassthroughCopy({
+        "src/resources/static/forestry/index.html": "/forestry/index.html",
     });
+
+    eleventyConfig.addPlugin(eleventyPluginLazyImages);
 
     eleventyConfig.setTemplateFormats([
         // Templates:
