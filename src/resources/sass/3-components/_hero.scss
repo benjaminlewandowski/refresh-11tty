@@ -6,7 +6,8 @@
         box-shadow: none;
         transform: translateY(4rem);
 
-        transition: top $duration $timing 0ms, background-color $duration $timing 0ms,
+        transition: top $duration $timing 0ms,
+            background-color $duration $timing 0ms,
             box-shadow $duration $timing 0ms;
 
         &:not(.visible-navigation) {
@@ -21,7 +22,8 @@
     &.hero-fade {
         top: 0;
 
-        transition: top $duration $timing 0ms, background-color $duration $timing 0ms,
+        transition: top $duration $timing 0ms,
+            background-color $duration $timing 0ms,
             box-shadow $duration $timing 0ms;
     }
 }

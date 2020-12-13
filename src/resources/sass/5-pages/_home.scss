@@ -1,4 +1,8 @@
 .is-home {
+    main.wrapper {
+        margin-top: 3rem;
+    }
+
     .page-title {
         span {
             display: block;
@@ -16,6 +20,8 @@
             align-items: flex-start;
             justify-content: flex-end;
 
+            overflow: hidden;
+
             border-radius: $xsmall;
             box-shadow: 0 0 $tiny var(--brand-primary);
 
@@ -31,8 +37,9 @@
             }
 
             img {
-                width: 100%;
-                object-fit: contain;
+                min-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
 
                 mix-blend-mode: luminosity;
             }

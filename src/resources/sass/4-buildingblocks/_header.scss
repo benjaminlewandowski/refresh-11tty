@@ -11,8 +11,8 @@
 
     box-shadow: 0 0 $large var(--brand-primary-25);
 
-    transition: transform $duration $timing 0ms, background-color $duration $timing 0ms,
-        box-shadow $duration $timing 0ms;
+    transition: transform $duration $timing 0ms,
+        background-color $duration $timing 0ms, box-shadow $duration $timing 0ms;
 
     &.is-faded {
         transform: translateY(-4rem);
