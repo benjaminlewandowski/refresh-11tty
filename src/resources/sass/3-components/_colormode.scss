@@ -10,10 +10,10 @@
     }
 
     & > span {
+        position: relative;
+
         display: none;
         width: 1rem;
-
-        position: relative;
     }
 
     .icon {
@@ -30,12 +30,12 @@
         display: none;
         padding: 0.25rem;
 
+        color: var(--text-color);
+
         line-height: 1.5rem;
 
         background: var(--card-bg);
         border: $tiny solid;
-
-        color: var(--text-color);
         border-radius: 0.25rem;
 
         &::after {
@@ -48,10 +48,9 @@
             height: 0.5rem;
 
             background-color: var(--card-bg);
-            transform: rotateZ(45deg);
-
-            border-left: $tiny solid;
             border-top: $tiny solid;
+            border-left: $tiny solid;
+            transform: rotateZ(45deg);
 
             content: "";
         }
@@ -68,11 +67,10 @@
 .color-scheme--light .js-colorscheme-toggle > .light,
 .color-scheme--system .js-colorscheme-toggle > .system {
     display: flex;
-    width: $large;
-    height: $large;
-
     align-items: center;
     justify-content: center;
+    width: $large;
+    height: $large;
 }
 
 :root {
