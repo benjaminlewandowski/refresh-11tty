@@ -7,7 +7,7 @@
 
     height: $xhuge;
 
-    background-color: var(--neutral-extreme-deemphasized);
+    background-color: var(--neutral-strong-deemphasized);
 
     box-shadow: 0 0 $large var(--brand-primary-25);
 
@@ -23,5 +23,9 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 0 $xxlarge;
+    padding: 0 $normal;
+
+    @media (min-width: $MediaMediumWidth) {
+        padding: 0 $xxlarge;
+    }
 }

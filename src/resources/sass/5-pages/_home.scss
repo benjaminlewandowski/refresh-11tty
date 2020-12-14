@@ -39,10 +39,6 @@
 
             overflow: hidden;
 
-            border-radius: $xsmall;
-            box-shadow: 0 0 $xsmall 0 var(--neutral-strong-emphasized-50),
-                0 0 0 $tiny var(--brand-primary);
-
             @media (min-width: $MediaMediumWidth) {
                 grid-row: initial;
                 justify-content: flex-end;
@@ -55,9 +51,11 @@
                 min-width: 100%;
                 min-height: 100%;
                 object-fit: cover;
-
-                filter: grayscale(1);
             }
         }
     }
+}
+
+path {
+    animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }

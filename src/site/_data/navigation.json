@@ -13,6 +13,14 @@
             "url": "/blog/"
         },
         {
+            "label": "Docs",
+            "url": "/docs/"
+        },
+        {
+            "label": "Styleguide",
+            "url": "/styleguide/"
+        },
+        {
             "label": "Contact",
             "url": "/contact/"
         }

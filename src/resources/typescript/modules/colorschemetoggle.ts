@@ -10,8 +10,6 @@ const colorscheme = function colorscheme() {
     } else if ( selectors.colorSchemeToggle === undefined) {
         console.warn("selectors.colorSchemeToggle is undefined");
     } else {
-        console.info("selectors.colorSchemeToggle found");
-
         const colorSchemeDark = () => {
             selectors.root.classList.add(dark);
             selectors.root.classList.remove(system);
@@ -50,19 +48,19 @@ const colorscheme = function colorscheme() {
 
         if (localStorage.getItem("colorScheme") === null) {
             colorSchemeSystem();
-            console.info("Color Scheme not found and set to dark");
+            console.info("Color Scheme not found and set to system");
         }
 
         selectors.colorSchemeToggle.addEventListener("click", () => {
             if (localStorage.getItem("colorScheme") === "dark") {
-                colorSchemeSystem();
-                console.info("Color Scheme set to: system");
-            } else if (localStorage.getItem("colorScheme") === "light") {
-                colorSchemeDark();
-                console.info("Color Scheme set to: dark");
-            } else {
                 colorSchemeLight();
                 console.info("Color Scheme set to: light");
+            } else if (localStorage.getItem("colorScheme") === "light") {
+                colorSchemeSystem();
+                console.info("Color Scheme set to: sytem");
+            } else if (localStorage.getItem("colorScheme") === "system") {
+                colorSchemeDark();
+                console.info("Color Scheme set to: dark");
             }
         });
     }

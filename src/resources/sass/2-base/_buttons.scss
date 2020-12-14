@@ -63,7 +63,7 @@ button,
     transition: background-color $duration $timing 0ms,
         color $duration $timing 0ms, text-shadow $duration $timing 0ms;
 
-    appearance: button;
+    appearance: none;
     user-select: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

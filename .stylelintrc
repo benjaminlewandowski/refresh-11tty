@@ -20,6 +20,7 @@
         "block-no-empty": null,
         "no-empty-source": null,
         "prettier/prettier": true,
+        "order/properties-order": [],
         "plugin/rational-order": [
             true,
             {
