@@ -1,11 +1,11 @@
-ol,
-ul,
-dl {
+ol:not([class]),
+ul:not([class]),
+dl:not([class]) {
     margin: 0 0 $normal 0;
 
     list-style-position: outside;
 
-    & li {
+    & li:not([class]) {
         padding-left: $normal;
     }
 }

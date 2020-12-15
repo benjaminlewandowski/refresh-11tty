@@ -1,0 +1,14 @@
+.text-gradient {
+    color: transparent;
+
+    background-image: linear-gradient(
+        to right,
+        var(--brand-primary-emphasized),
+        var(--brand-primary),
+        var(--brand-primary-deemphasized),
+        var(--brand-secondary-deemphasized),
+        var(--brand-secondary)
+    );
+
+    background-clip: text;
+}

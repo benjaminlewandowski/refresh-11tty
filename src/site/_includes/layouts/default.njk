@@ -4,7 +4,7 @@
         {% include './../components/html-header.njk' %}
     </head>
 
-    <body class="loading {% block type %}is-page{% endblock%}{% if body_class %} {{ body_class }}{% endif %}{% if has_hero %} has-hero{% endif %}">
+    <body class="loading{% if type %} {{ type }}{% endif %}{% if body_class %} {{ body_class }}{% endif %}{% if has_hero %} has-hero{% endif %}">
         <a class="sr-only" href="#main">Skip to content</a>
 
         {% include 'components/loader.njk' %}

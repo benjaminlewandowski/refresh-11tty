@@ -50,6 +50,8 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addWatchTarget("./../../images");
     eleventyConfig.addWatchTarget("./../../static/icons");
+    eleventyConfig.addWatchTarget("./../../scss/");
+    eleventyConfig.addWatchTarget("./../../typescript/");
 
     eleventyConfig.addPassthroughCopy({
         "src/resources/images": "/images",

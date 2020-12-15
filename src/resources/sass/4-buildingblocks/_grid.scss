@@ -7,11 +7,19 @@
 
 main.wrapper {
     min-height: calc(100vh - #{$xhuge} - #{$xhuge});
-    margin-top: $xhuge;
+    margin-top: 2 * $xhuge;
     padding: $normal;
-
+    @media (min-width: $MediaLargeWidth) {
+        margin-top: $xhuge;
+    }
     @media (min-width: $MediaMediumWidth) {
         padding: $normal $xxlarge;
+    }
+}
+
+.js {
+    main.wrapper {
+        margin-top: $xhuge;
     }
 }
 

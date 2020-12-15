@@ -14,13 +14,13 @@
 
     .mainnavigation__menu {
         position: fixed;
-        top: $negative-xhuge;
+        top: $xhuge;
         left: 0;
 
         display: flex;
 
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
 
         width: 100%;
         min-height: $xhuge;
@@ -30,10 +30,14 @@
         background-color: var(--neutral-strong-deemphasized);
         box-shadow: 0 $large $large $negative-large var(--brand-primary-25);
 
-        opacity: 0;
+        opacity: 1;
 
         transition: opacity $timing $duration, top $timing $duration,
             background-color $timing $duration;
+
+        @media (min-width: $MediaMediumWidth) {
+            padding: $normal $xxlarge;
+        }
 
         @media (min-width: $MediaLargeWidth) {
             position: static;
@@ -59,6 +63,9 @@
 }
 
 .mainnavigation__item {
+    + .mainnavigation__item {
+        margin-left: $xsmall;
+    }
 }
 
 .mainnavigation__link {

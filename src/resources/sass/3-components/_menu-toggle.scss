@@ -1,4 +1,4 @@
-.navigation-toggle {
+.js-navigation-toggle {
     @media (min-width: $MediaLargeWidth) {
         display: none;
     }
@@ -68,6 +68,18 @@
 
                 transform: rotateZ(-45deg);
             }
+        }
+    }
+}
+
+.js {
+    .mainnavigation__menu {
+        top: $xhuge;
+
+        justify-content: center;
+
+        @media (max-width: $MediaLargeWidth - $tiny) {
+            opacity: 0;
         }
     }
 }

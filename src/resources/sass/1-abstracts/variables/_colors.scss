@@ -1,3 +1,70 @@
+$saturation-50: 40%;
+$saturation-100: 50%;
+$saturation-200: 55%;
+$saturation-300: 60%;
+$saturation-400: 65%;
+$saturation-500: 70%;
+$saturation-600: 75%;
+$saturation-700: 80%;
+$saturation-800: 85%;
+$saturation-900: 90%;
+
+$luminance-50: 95%;
+$luminance-100: 95%;
+$luminance-200: 95%;
+$luminance-300: 95%;
+$luminance-400: 95%;
+$luminance-500: 95%;
+$luminance-600: 95%;
+$luminance-700: 95%;
+$luminance-800: 95%;
+$luminance-900: 95%;
+
+$hue-red: 8;
+$hue-orange: 32;
+$hue-yellow: 56;
+$hue-lime: 72;
+$hue-green: 104;
+$hue-teal: 168;
+$hue-cyan: 184;
+$hue-blue: 208;
+$hue-indigo: 256;
+$hue-purple: 280;
+$hue-pink: 312;
+
+$red-50: hsl($hue-red, $saturation-50, $luminance-50);
+$red-100: hsl($hue-red, $saturation-100, $luminance-100);
+$red-200: hsl($hue-red, $saturation-200, $luminance-200);
+$red-300: hsl($hue-red, $saturation-300, $luminance-300);
+$red-400: hsl($hue-red, $saturation-400, $luminance-400);
+$red-500: hsl($hue-red, $saturation-500, $luminance-500);
+$red-600: hsl($hue-red, $saturation-600, $luminance-600);
+$red-700: hsl($hue-red, $saturation-700, $luminance-700);
+$red-800: hsl($hue-red, $saturation-800, $luminance-800);
+$red-900: hsl($hue-red, $saturation-900, $luminance-900);
+
+$orange-50: hsl($hue-orange, $saturation-50, $luminance-50);
+$orange-100: hsl($hue-orange, $saturation-100, $luminance-100);
+$orange-200: hsl($hue-orange, $saturation-200, $luminance-200);
+$orange-300: hsl($hue-orange, $saturation-300, $luminance-300);
+$orange-400: hsl($hue-orange, $saturation-400, $luminance-400);
+$orange-500: hsl($hue-orange, $saturation-500, $luminance-500);
+$orange-600: hsl($hue-orange, $saturation-600, $luminance-600);
+$orange-700: hsl($hue-orange, $saturation-700, $luminance-700);
+$orange-800: hsl($hue-orange, $saturation-800, $luminance-800);
+$orange-900: hsl($hue-orange, $saturation-900, $luminance-900);
+
+$yellow-50: hsl($hue-yellow, $saturation-50, $luminance-50);
+$yellow-100: hsl($hue-yellow, $saturation-100, $luminance-100);
+$yellow-200: hsl($hue-yellow, $saturation-200, $luminance-200);
+$yellow-300: hsl($hue-yellow, $saturation-300, $luminance-300);
+$yellow-400: hsl($hue-yellow, $saturation-400, $luminance-400);
+$yellow-500: hsl($hue-yellow, $saturation-500, $luminance-500);
+$yellow-600: hsl($hue-yellow, $saturation-600, $luminance-600);
+$yellow-700: hsl($hue-yellow, $saturation-700, $luminance-700);
+$yellow-800: hsl($hue-yellow, $saturation-800, $luminance-800);
+$yellow-900: hsl($hue-yellow, $saturation-900, $luminance-900);
+
 $brand-primary: hsl(200, 80%, 25%);
 $brand-primary-dark: saturate(darken($brand-primary, 15), 15);
 $brand-primary-light: desaturate(lighten($brand-primary, 30), 30);

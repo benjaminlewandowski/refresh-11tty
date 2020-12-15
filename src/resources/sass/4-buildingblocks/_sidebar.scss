@@ -1,9 +1,4 @@
-.content-wrapper {
-    width: 100%;
-    max-width: var(--mediamax);
-    margin-right: auto;
-    margin-left: auto;
-
+.wrapper {
     &.has-sidebar {
         display: flex;
         flex-wrap: wrap;
