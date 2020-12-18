@@ -1,33 +1,27 @@
-import selectors from "../utilities/selectors";
-
 const navigationtoggle = function navigationtoggle() {
+    const navigation = document.getElementById("navigation-main");
+    const toggle = document.getElementById("navigation-toggle");
+
     if (
-        selectors.navigationToggle === null ||
-        selectors.navigationToggle === undefined
+        navigation === null ||
+        navigation === undefined ||
+        toggle === null ||
+        toggle === undefined
     ) {
-        console.warn("selectors.navigationToggle is null or undefined");
+        // navigation or toggle is null or undefined so don't load the mobile navigation
     } else {
-        console.info("selectors.navigationToggle found");
+        toggle.addEventListener("click", function () {
+            toggle.classList.toggle("is-closed");
+            toggle.classList.toggle("is-opened");
+            navigation.classList.toggle("is-visible");
+            document
+                .getElementById("header")
+                .classList.toggle("visible-navigation");
 
-        selectors.navigationToggle.addEventListener("click", function () {
-            selectors.navigationToggle.classList.toggle("is-closed");
-            selectors.navigationToggle.classList.toggle("is-opened");
-            selectors.navigationMain.classList.toggle("is-visible");
-            selectors.header.classList.toggle("visible-navigation");
-
-            if (
-                selectors.navigationToggle.getAttribute("aria-expanded") ===
-                "false"
-            ) {
-                selectors.navigationToggle.setAttribute(
-                    "aria-expanded",
-                    "true"
-                );
+            if (toggle.getAttribute("aria-expanded") === "false") {
+                toggle.setAttribute("aria-expanded", "true");
             } else {
-                selectors.navigationToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+                toggle.setAttribute("aria-expanded", "false");
             }
         });
     }

@@ -1,32 +1,26 @@
-import selectors from "../utilities/selectors";
-
 const loader = function loader() {
-    if (selectors.loader === null) {
-        console.warn("no loader initialized? (loader is null)");
-    } else if (selectors.loader === undefined) {
-        console.warn("no loader initialized? (loader is undefined)");
-    } else {
-        console.info("loader found");
+    const loader = document.getElementById("loader");
+    const timer = 250;
 
+    if (loader === null || loader === undefined) {
+    } else {
         const removeLoader = () => {
             document.body.classList.remove("loading");
             document.body.classList.add("loaded");
 
-            selectors.loader.classList.remove("loading");
-            selectors.loader.classList.add("loaded");
+            loader.classList.remove("loading");
+            loader.classList.add("loaded");
 
             setTimeout(function () {
-                selectors.loader.remove();
-            }, 400);
+                loader.remove();
+            }, timer);
         };
 
         document.body.onload = function () {
             setTimeout(function () {
                 removeLoader();
-            }, 100);
+            }, timer);
         };
-
-        console.info("loader removed");
     }
 };
 

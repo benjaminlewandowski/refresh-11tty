@@ -16,10 +16,6 @@
         span {
             display: block;
 
-            &:first-child {
-                font-style: italic;
-            }
-
             &:not(:first-child) {
                 font-size: 70%;
             }

@@ -10,11 +10,12 @@
 .mainnavigation {
     display: flex;
     align-items: center;
-    min-height: $xhuge;
+    min-height: $huge;
+    margin-right: $negative-xsmall;
 
     .mainnavigation__menu {
         position: fixed;
-        top: $xhuge;
+        top: $negative-huge;
         left: 0;
 
         display: flex;
@@ -23,9 +24,9 @@
         justify-content: flex-start;
 
         width: 100%;
-        min-height: $xhuge;
+        min-height: $xxlarge;
         margin: 0;
-        padding: $normal;
+        padding: $small;
 
         background-color: var(--neutral-strong-deemphasized);
         box-shadow: 0 $large $large $negative-large var(--brand-primary-25);
@@ -36,7 +37,7 @@
             background-color $timing $duration;
 
         @media (min-width: $MediaMediumWidth) {
-            padding: $normal $xxlarge;
+            padding: $small $xlarge;
         }
 
         @media (min-width: $MediaLargeWidth) {
@@ -54,7 +55,7 @@
     @media (max-width: $MediaLargeWidth - $tiny) {
         &.is-visible {
             .mainnavigation__menu {
-                top: $xhuge;
+                top: $huge;
 
                 opacity: 1;
             }

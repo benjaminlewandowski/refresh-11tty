@@ -12,12 +12,13 @@
         margin: 0;
     }
 }
-
+/*
 @supports (display: grid) {
     .browserupgrade {
         display: none;
     }
 }
+*/
 
 .sr-only {
     position: absolute;
@@ -83,7 +84,7 @@
 [disabled],
 :not(html).disabled {
     cursor: not-allowed;
-    opacity: 0.5;
+    opacity: 0.75;
 
     &:active {
         pointer-events: none;

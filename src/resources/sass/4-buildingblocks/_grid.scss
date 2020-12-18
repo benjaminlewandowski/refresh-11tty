@@ -6,20 +6,22 @@
 }
 
 main.wrapper {
-    min-height: calc(100vh - #{$xhuge} - #{$xhuge});
-    margin-top: 2 * $xhuge;
+    min-height: calc(100vh -/* header */ #{$huge} -/* footer */ #{$xhuge});
+    margin-top: $xxhuge;
     padding: $normal;
-    @media (min-width: $MediaLargeWidth) {
-        margin-top: $xhuge;
-    }
+
     @media (min-width: $MediaMediumWidth) {
-        padding: $normal $xxlarge;
+        padding: $normal $xlarge;
+    }
+
+    @media (min-width: $MediaLargeWidth) {
+        margin-top: $huge;
     }
 }
 
 .js {
     main.wrapper {
-        margin-top: $xhuge;
+        margin-top: $huge;
     }
 }
 
