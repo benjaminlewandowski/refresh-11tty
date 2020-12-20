@@ -1,0 +1,9 @@
+.no-js .js-navigation-toggle {
+  display: none !important;
+}
+.no-js .js-colorscheme-toggle {
+  display: none !important;
+}
+.no-js .js-image {
+  display: none !important;
+}
