@@ -10,28 +10,35 @@ ol {
     list-style-type: decimal-leading-zero;
 }
 
-ol ol,
-ul ul,
-ol ul,
-ul ol {
-    margin: 0 0 $xsmall 0;
-}
-
-ol:not([class]),
-ul:not([class]),
-dl:not([class]) {
-    margin: 0 0 $normal 0;
-
-    list-style-position: outside;
-
-    & li:not([class]) {
-        padding-left: $normal;
+ol,
+ul,
+dl {
+    ol,
+    ul {
+        margin: 0 0 $xsmall 0;
     }
-}
 
-ul[class],
-ol[class] {
-    list-style: none;
+    &:not([class]) {
+        margin: 0 0 $normal 0;
+
+        list-style-position: outside;
+
+        li {
+            &:not([class]) {
+                padding-left: $normal;
+            }
+
+            &[class] {
+                padding-left: 0;
+            }
+        }
+    }
+
+    &[class] {
+        padding-left: 0;
+
+        list-style: none;
+    }
 }
 
 dt {
