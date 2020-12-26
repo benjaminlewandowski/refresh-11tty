@@ -318,8 +318,8 @@ pre {
 code {
     display: inline-block;
 
-    margin: 0 $tiny;
-    padding: $tiny $xsmall;
+    margin: 0 $xtiny;
+    padding: $xtiny $xsmall;
     padding-top: $xxsmall;
     padding-bottom: $xxsmall;
 
@@ -328,7 +328,7 @@ code {
     line-height: $large;
 
     background-color: var(--neutral-strong-deemphasized);
-    border: $tiny solid var(--neutral-deemphasized);
+    border: $xtiny solid var(--neutral-deemphasized);
     border-radius: $xxsmall;
     box-shadow: $xsmall 0 0 var(--neutral-25),
         var(--negative-xsmall) 0 0 var(--neutral-25);

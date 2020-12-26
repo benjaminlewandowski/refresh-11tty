@@ -1,9 +1,9 @@
 .footer {
     display: flex;
-    min-height: $xhuge;
+    min-height: $large;
 
     background-color: var(--neutral-extreme-deemphasized-75);
-    border-top: var(--neutral) $tiny solid;
+    box-shadow: 0 $large $large $large var(--brand-primary-25);
 }
 
 .footer__inner {

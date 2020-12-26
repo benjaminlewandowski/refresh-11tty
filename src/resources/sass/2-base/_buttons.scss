@@ -42,7 +42,7 @@ button,
 .btn {
     display: inline-flex;
     margin: 0;
-    padding: $small $normal;
+    padding: $xsmall $small;
     overflow: visible;
 
     color: var(--text-color);
@@ -192,28 +192,28 @@ button,
 
     &.is-tiny {
         min-height: $xsmall;
-        padding: $xxsmall;
+        padding: $tiny;
 
         font-size: $xsmall;
     }
 
     &.is-small {
         min-height: $small;
-        padding: $xsmall;
+        padding: $xxsmall $xsmall;
 
         font-size: $small;
     }
 
     &.is-large {
         min-height: $xlarge;
-        padding: $small;
+        padding: $small $normal;
 
         font-size: $xlarge;
     }
 
     &.is-huge {
         min-height: $xxlarge;
-        padding: $normal;
+        padding: $normal $large;
 
         font-size: $xxlarge;
     }
@@ -274,7 +274,7 @@ button,
             }
 
             &:first-child {
-                border-left-width: $tiny;
+                border-left-width: $xtiny;
                 border-radius: $xsmall 0 0 $xsmall;
             }
 

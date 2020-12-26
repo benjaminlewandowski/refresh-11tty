@@ -230,8 +230,9 @@
 
     --default-shadow-color: var(--neutral-extreme-deemphasized-75);
 
-    --form-box-shadow: inset 0 #{$border-width} #{$tiny} var(--overlay-bg);
-    --form-box-shadow-focus: inset 0 #{$border-width} #{$tiny} var(--overlay-bg),
+    --form-box-shadow: inset 0 #{$border-width} #{$xtiny} var(--overlay-bg);
+    --form-box-shadow-focus: inset 0 #{$border-width} #{$xtiny}
+            var(--overlay-bg),
         0 0 #{$xxsmall} var(--brand-primary-emphasized);
 
     &.color-scheme--dark {
@@ -1265,9 +1266,9 @@
 
             --default-shadow-color: var(--neutral-extreme-deemphasized-75);
 
-            --form-box-shadow: inset 0 #{$border-width} #{$tiny}
+            --form-box-shadow: inset 0 #{$border-width} #{$xtiny}
                 var(--overlay-bg);
-            --form-box-shadow-focus: inset 0 #{$border-width} #{$tiny}
+            --form-box-shadow-focus: inset 0 #{$border-width} #{$xtiny}
                     var(--overlay-bg),
                 0 0 #{$xxsmall} var(--brand-primary-emphasized);
         }

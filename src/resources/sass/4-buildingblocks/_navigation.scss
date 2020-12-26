@@ -1,12 +1,3 @@
-.navigation {
-}
-
-.navigation__item {
-}
-
-.navigation__link {
-}
-
 .mainnavigation {
     display: flex;
     align-items: center;
@@ -36,6 +27,19 @@
         transition: opacity $timing $duration, top $timing $duration,
             background-color $timing $duration;
 
+        &::before {
+            position: absolute;
+            top: $negative-xxlarge;
+            left: 0;
+
+            width: 100%;
+            height: $xxlarge;
+
+            background-color: var(--body-bg);
+
+            content: "";
+        }
+
         @media (min-width: $MediaMediumWidth) {
             padding: $small $xlarge;
         }
@@ -52,10 +56,12 @@
         }
     }
 
-    @media (max-width: $MediaLargeWidth - $tiny) {
+    @media (max-width: $MediaLargeWidth - $xtiny) {
         &.is-visible {
             .mainnavigation__menu {
                 top: $huge;
+
+                box-shadow: 0 0 $large var(--brand-primary-25);
 
                 opacity: 1;
             }
@@ -69,27 +75,8 @@
     }
 }
 
-.mainnavigation__link {
-}
-
-.subnavigation {
-}
-
-.subnavigation__menu {
-}
-
-.subnavigation__item {
-}
-
-.subnavigation__link {
-}
-
 .technavigation {
     margin-left: auto;
-}
-
-.technavigation,
-.socialnavigation {
 }
 
 .technavigation__menu,
@@ -109,6 +96,26 @@
     }
 }
 
+.technavigation__link,
+.socialnavigation__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $xlarge;
+    height: $xlarge;
+    padding: $xxsmall;
+
+    text-align: center;
+
+    border-radius: 100%;
+
+    &:hover {
+        .icon {
+            fill: var(--neutral-extreme-deemphasized);
+        }
+    }
+}
+
 .technavigation__link {
     border: 1px solid var(--brand-secondary-deemphasized-50);
 
@@ -123,26 +130,6 @@
 
     &:hover {
         background-color: var(--brand-primary-emphasized);
-    }
-}
-
-.technavigation__link,
-.socialnavigation__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: $xxlarge;
-    height: $xxlarge;
-    padding: $xxsmall;
-
-    text-align: center;
-
-    border-radius: 100%;
-
-    &:hover {
-        .icon {
-            fill: var(--neutral-extreme-deemphasized);
-        }
     }
 }
 

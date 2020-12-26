@@ -1,6 +1,6 @@
 .badge {
-    margin: 0 $tiny;
-    padding: $tiny $xsmall;
+    margin: 0 $xtiny;
+    padding: $xtiny $xsmall;
     padding-top: $xxsmall;
     padding-bottom: $xxsmall;
 
@@ -11,7 +11,7 @@
 
     background: var(--neutral-strong-deemphasized);
     background-color: var(--neutral-deemphasized-25);
-    border: $tiny solid var(--neutral-emphasized);
+    border: $xtiny solid var(--neutral-emphasized);
     border-radius: $xxsmall;
     box-shadow: $xsmall 0 0 var(--neutral-25),
         var(--negative-xsmall) 0 0 var(--neutral-25);

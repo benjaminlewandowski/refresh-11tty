@@ -2,7 +2,7 @@
     padding: $xsmall $xxsmall;
 
     background-color: var(--neutral-extreme-deemphasized);
-    border: $tiny solid var(--neutral-deemphasized);
+    border: $xtiny solid var(--neutral-deemphasized);
     border-radius: $xxsmall;
 
     & strong,
@@ -27,7 +27,7 @@
 
     & button,
     & .btn {
-        padding: $tiny $xxsmall;
+        padding: $xtiny $xxsmall;
 
         color: var(--neutral-strong-emphasized);
 

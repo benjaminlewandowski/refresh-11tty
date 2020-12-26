@@ -74,11 +74,11 @@
 
 .js {
     .mainnavigation__menu {
-        top: $xhuge;
+        top: $negative-xhuge;
 
         justify-content: center;
 
-        @media (max-width: $MediaLargeWidth - $tiny) {
+        @media (max-width: $MediaLargeWidth - $xtiny) {
             opacity: 0;
         }
     }

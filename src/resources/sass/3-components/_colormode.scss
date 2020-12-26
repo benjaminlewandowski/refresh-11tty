@@ -35,7 +35,7 @@
         line-height: 1.5rem;
 
         background: var(--card-bg);
-        border: $tiny solid;
+        border: $xtiny solid;
         border-radius: 0.25rem;
 
         &::after {
@@ -48,8 +48,8 @@
             height: 0.5rem;
 
             background-color: var(--card-bg);
-            border-top: $tiny solid;
-            border-left: $tiny solid;
+            border-top: $xtiny solid;
+            border-left: $xtiny solid;
             transform: rotateZ(45deg);
 
             content: "";
