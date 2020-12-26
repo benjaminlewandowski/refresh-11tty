@@ -3,13 +3,13 @@ A date formatter filter for Nunjucks
 */
 
 module.exports = function (date, part) {
-    var d = new Date(date);
+    const d = new Date(date);
 
-    if (part == "year") {
+    if (part === "year") {
         return d.getUTCFullYear();
     }
 
-    var month = [
+    const month = [
         "January",
         "February",
         "March",
@@ -24,7 +24,7 @@ module.exports = function (date, part) {
         "December",
     ];
 
-    var ordinal = {
+    const ordinal = {
         1: "st",
         2: "nd",
         3: "rd",

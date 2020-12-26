@@ -3,7 +3,8 @@
 */
 
 module.exports = function (date) {
-    let timestamp = new Date();
+    const timestamp = new Date();
+
     return (
         timestamp.getFullYear() +
         "-" +
